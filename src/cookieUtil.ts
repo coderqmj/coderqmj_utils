@@ -4,7 +4,7 @@
 export const getCookie = (key: string): string => {
   const cookieRegExp = new RegExp(`(?:^|;+|\\s+)${key}=([^;]*)`);
   const m = document?.cookie?.match(cookieRegExp);
-  return !m ? "" : m[1];
+  return !m ? '' : m[1];
 };
 
 /**
@@ -26,8 +26,8 @@ export const setCookie = (
   const expire = new Date();
   expire.setTime(expire.getTime() + 36e5 * hour);
   document.cookie = `${name}=${value}; ${
-    hour ? `expires=${expire.toUTCString()}; ` : ""
-  }${path ? `path=${path}; ` : "path=/; "}${
+    hour ? `expires=${expire.toUTCString()}; ` : ''
+  }${path ? `path=${path}; ` : 'path=/; '}${
     domain ? `domain=${domain};` : `domain=${document.domain};`
   }`;
 

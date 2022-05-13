@@ -1,2 +1,2 @@
-export * from "./cookieUtil";
-export * from "./object";
+export * from './cookieUtil';
+export * from './object';
