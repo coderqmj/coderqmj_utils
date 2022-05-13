@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "declaration": true,
+    "module": "commonjs",
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read */
+    "skipLibCheck": true,
+    "outDir": "lib",
+    "lib": ["ES2015", "ES2016", "DOM", "ES2017"],
+    "downlevelIteration": true
+  }
+}
