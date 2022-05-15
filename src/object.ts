@@ -4,7 +4,7 @@
  */
 export function isObject(obj: any) {
   const valueType = typeof obj;
-  return obj !== null && (valueType === "object" || valueType === "function");
+  return obj !== null && (valueType === 'object' || valueType === 'function');
 }
 
 /**
@@ -22,12 +22,12 @@ export function deepClone(originValue: any, map = new WeakMap()) {
   }
 
   // 判断如果是Symbol的value, 那么创建一个新的Symbol
-  if (typeof originValue === "symbol") {
+  if (typeof originValue === 'symbol') {
     return Symbol(originValue.description);
   }
 
   // 判断如果是函数类型, 那么直接使用同一个函数
-  if (typeof originValue === "function") {
+  if (typeof originValue === 'function') {
     return originValue;
   }
 
@@ -55,3 +55,11 @@ export function deepClone(originValue: any, map = new WeakMap()) {
 
   return newObject;
 }
+
+/**
+ * 大驼峰对象转小驼峰
+ */
+
+/**
+ * 小驼峰对象转大驼峰
+ */

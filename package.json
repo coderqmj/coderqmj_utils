@@ -1,14 +1,17 @@
 {
   "name": "coderqmj_utils",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
+  "keywords": [
+    "utils"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "rm -rf lib && npx tsc",
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "commit": "git-cz"
