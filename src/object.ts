@@ -63,3 +63,35 @@ export function deepClone(originValue: any, map = new WeakMap()) {
 /**
  * 小驼峰对象转大驼峰
  */
+
+/**
+ * 属性是否为null，undefined，''， {}
+ */
+export function isNull(value: any) {
+  const type = Object.prototype.toString.call(value);
+  return (
+    type === '[object Null]' ||
+    type === '[object Undefined]' ||
+    value === '' ||
+    JSON.stringify(value) === '{}'
+  );
+}
+
+/**
+ * 删除对象中属性的空值
+ */
+export function deleteNullValue(obj: any) {
+  let newObj: any = {};
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      if (!isNull(obj[key])) {
+        if (Object.prototype.toString.call(obj[key]) === '[object Object]') {
+          newObj[key] = deleteNullValue(obj[key]);
+        } else {
+          newObj[key] = obj[key];
+        }
+      }
+    }
+  }
+  return newObj;
+}
