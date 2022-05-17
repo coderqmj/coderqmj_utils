@@ -40,3 +40,5 @@
 //   return newObj;
 // }
 // console.log(deleteNullValue(info));
+let data = new Date();
+console.log(new Date());
